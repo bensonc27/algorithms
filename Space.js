@@ -36,16 +36,31 @@
 // Return the final result
 
 function binarytodecimal(input) {
-  
-  for (let i = 0; i < input; i++) {
-    if (input[i] === "1"){
-      length = 
-      i*2
+  let decimal = 0;
+
+    for (let i = 0; i < input.length; i++) {
+      if (input[input.length - 1 - i] ==="1"){
+        decimal = decimal + Math.power(2,i)
+      }
     }
-    count++;
+      return decimal;
   }
-    return count;
+
+console.log(binarytodecimal(101));
+
+function dtob (d){
+  let b = 0;
+
+  for(let i = 0; i < ; i++)
+    if (d%2 ==="0"){
+      [b.] 
+    }
+    else (d%2 ==="1"){
+      
+    }
 }
+
+
 
 
 function binarytodecimal(one,two,) {

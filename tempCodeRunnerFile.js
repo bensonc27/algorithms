@@ -1,13 +1,16 @@
-
-function binarytodecimal(input) {
-  let decimal = 0;
-
-    for (let i = 0; i < input.length; i++) {
-      if (input[input.length - 1 - i] ==="1"){
-        decimal = decimal + Math.power(2,i)
-      }
+async function getData() {
+  //fetch returns a promise
+  try {
+    const response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
+    if (response.status != 200) {
+      throw new Error(response);
+    } else {
+      const data = await response.json();
+      document.querySelector("h1").textContent = data.name;
     }
-      return decimal;
+  } catch (error) {
+    console.log(error);
+    alert("sorry could not find that pocket monster");
   }
-
-console.log(binarytodecimal(101));
+}
+getData();
